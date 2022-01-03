@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Calculadora</h1>
+      <div class="calculator">
+        <input type="text" id="result-field" value="" placeholder="0" />
+        <div class="calc-content">
+          <input type="button" class="symbol" value="C" onclick="eraseAll()" />
+
+          <button class="symbol" type="button" onclick="eraseOne()">
+            <i data-feather="delete"></i>
+          </button>
+
+          <button
+            class="symbol"
+            type="button"
+            value="*1/100"
+            onclick="insertValue(this.value)"
+          >
+            <i data-feather="percent"></i>
+          </button>
+
+          <button
+            type="button"
+            class="symbol"
+            value="/"
+            onclick="insertValue(this.value)"
+          >
+            <i data-feather="divide"></i>
+          </button>
+
+          <input
+            type="button"
+            class="number"
+            value="7"
+            onclick="insertValue(this.value)"
+          />
+
+          <input
+            type="button"
+            class="number"
+            value="8"
+            onclick="insertValue(this.value)"
+          />
+
+          <input
+            type="button"
+            class="number"
+            value="9"
+            onclick="insertValue(this.value)"
+          />
+
+          <button
+            type="button"
+            class="symbol"
+            value="*"
+            onclick="insertValue(this.value)"
+          >
+            <i data-feather="x"></i>
+          </button>
+
+          <input
+            type="button"
+            class="number"
+            value="4"
+            onclick="insertValue(this.value)"
+          />
+
+          <input
+            type="button"
+            class="number"
+            value="5"
+            onclick="insertValue(this.value)"
+          />
+
+          <input
+            type="button"
+            class="number"
+            value="6"
+            onclick="insertValue(this.value)"
+          />
+
+          <button
+            type="button"
+            class="symbol"
+            value="/"
+            onclick="insertValue(this.value)"
+          >
+            <i data-feather="minus"></i>
+          </button>
+
+          <input
+            type="button"
+            class="number"
+            value="1"
+            onclick="insertValue(this.value)"
+          />
+
+          <input
+            type="button"
+            class="number"
+            value="2"
+            onclick="insertValue(this.value)"
+          />
+
+          <input
+            type="button"
+            class="number"
+            value="3"
+            onclick="insertValue(this.value)"
+          />
+
+          <button
+            type="button"
+            class="symbol"
+            value="/"
+            onclick="insertValue(this.value)"
+          >
+            <i data-feather="plus"></i>
+          </button>
+
+          <input
+            type="button"
+            class="number"
+            value="0"
+            onclick="insertValue(this.value)"
+          />
+
+          <input
+            type="button"
+            class="number"
+            value="."
+            onclick="insertValue(this.value)"
+          />
+
+          <input type="button" value="" onclick="insertValue(this.value)" />
+
+          <input
+            class="equal-button"
+            type="button"
+            value="="
+            onclick="calc()"
+          />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Desenvolvido por
+        <a href="https://github.com/yasminbraga">yasminbraga</a> com <3
+      </p>
+    </footer>
+  </body>
+</html>
+
+<script src="scripts.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+</script>
